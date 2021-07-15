@@ -1,0 +1,58 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Shirt-1 for Men",
+      "brand": "Nike",
+      "idealFor": "men",
+      "price": 399,
+      "size": ["M", "L"],
+      "imgUrl": "/assets/images/shirt1.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "Shirt-2 for Men",
+      "brand": "Gucci",
+      "idealFor": "men",
+      "price": 499,
+      "size": ["L", "S", "M"],
+      "imgUrl": "/assets/images/shirt2.jpeg"
+    },
+    {
+      "id": 3,
+      "name": "Shirt-3 for Men",
+      "brand": "Nike",
+      "idealFor": "men",
+      "price": 599,
+      "size": ["S", "L"],
+      "imgUrl": "/assets/images/shirt3.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "Shirt-4 for Men",
+      "brand": "ABC",
+      "idealFor": "men",
+      "price": 399,
+      "size": ["M", "S"],
+      "imgUrl": "/assets/images/shirt4.jpeg"
+    },
+    {
+      "id": 5,
+      "name": "Shirt-5 for Women",
+      "brand": "Gucci",
+      "idealFor": "women",
+      "price": 499,
+      "size": ["S", "L", "M"],
+      "imgUrl": "/assets/images/shirt5.jpeg"
+    },
+    {
+      "id": 6,
+      "name": "Shirt-6 for Women",
+      "brand": "Nike",
+      "idealFor": "women",
+      "price": 699,
+      "size": ["S", "L"],
+      "imgUrl": "/assets/images/shirt6.jpeg"
+    }
+  ]
+}

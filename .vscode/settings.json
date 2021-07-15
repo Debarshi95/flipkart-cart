@@ -1,0 +1,27 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "beautify.language": {
+
+        "js": {
+            "type": [
+                "javascript",
+                "json",
+                "jsonc",
+                "react"
+            ],
+            "filename": [
+                ".jshintrc",
+                ".jsbeautifyrc"
+            ]
+        },
+        "css": [
+            "css",
+            "less",
+            "scss"
+        ],
+        "html": [
+            "htm",
+            "html"
+        ]
+    }
+}
