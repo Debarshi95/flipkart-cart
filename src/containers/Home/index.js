@@ -1,21 +1,14 @@
-import {
-  Box,
-  Card,
-  CardMedia,
-  CardContent,
-  Typography,
-  Button,
-} from "@material-ui/core";
-import React from "react";
+import React from 'react';
+import { Box, Card, CardMedia, CardContent, Typography, Button } from '@material-ui/core';
 
 function Home() {
   const [products, setProducts] = React.useState(null);
   const [cartItem, setCartItems] = React.useState(
-    JSON.parse(localStorage.getItem("cart")) || { items: [] }
+    JSON.parse(localStorage.getItem('cart')) || { items: [] }
   );
 
   React.useEffect(() => {
-    fetch("/assets/data.json")
+    fetch('/assets/data.json')
       .then((res) => res.json())
       .then((data) => setProducts(data.products))
       .catch((err) => console.log(err));
@@ -26,20 +19,20 @@ function Home() {
     if (oldItem) {
       const filteredArr = cartItem.items.filter((i) => i.id !== item.id);
       setCartItems((prev) => {
-        let duplicateObj = {
+        const duplicateObj = {
           ...prev,
-          items: [...filteredArr, { ...oldItem, count: ++oldItem.count }],
+          items: [...filteredArr, { ...oldItem, count: oldItem.count + 1 }],
         };
-        localStorage.setItem("cart", JSON.stringify(duplicateObj));
+        localStorage.setItem('cart', JSON.stringify(duplicateObj));
         return duplicateObj;
       });
     } else {
       setCartItems((prev) => {
-        let duplicateObj = {
+        const duplicateObj = {
           ...prev,
           items: [...prev.items, { ...item, count: 1 }],
         };
-        localStorage.setItem("cart", JSON.stringify(duplicateObj));
+        localStorage.setItem('cart', JSON.stringify(duplicateObj));
         return duplicateObj;
       });
     }
@@ -65,16 +58,14 @@ function Home() {
           <CardMedia
             image={product.imgUrl}
             style={{
-              width: "100%",
-              height: "80%",
+              width: '100%',
+              height: '80%',
             }}
           />
           <CardContent>
             <Typography> {product.name} </Typography>
             <Box display="flex">
-              <Button onClick={() => addItemToCart(product)}>
-                Add to Cart
-              </Button>
+              <Button onClick={() => addItemToCart(product)}>Add to Cart</Button>
             </Box>
           </CardContent>
         </Card>
